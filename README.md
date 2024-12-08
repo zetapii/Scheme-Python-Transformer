@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Scheme-Python Transformer** is a modular Python project designed to dynamically transform Python scripts containing `racket_insert` calls. These calls are placeholders that reference a Scheme-Like code. The transformer parses the Python code, replaces `racket_insert` calls with their corresponding Python Abstract Syntax Tree (AST) equivalents derived from the Scheme-Like code, and executes the transformed Python script seamlessly.
+The **Scheme-Python Transformer** is a Python-Based project designed to dynamically transform Python scripts containing `racket_insert` calls. These calls are placeholders that reference a Scheme-Like code. The transformer parses the Python code, replaces `racket_insert` calls with their corresponding Python Abstract Syntax Tree (AST) equivalents derived from the Scheme-Like code, and executes the transformed Python script seamlessly.
 
 ## Requirements
 
@@ -14,7 +14,7 @@ The **Scheme-Python Transformer** is a modular Python project designed to dynami
 1. **Clone the Repository**
 
    ```bash
-    git clone https://github.com/zetapi/racket-python-transformer.git
+    git clone https://github.com/zetapii/Scheme-Python-Transformer.git
     cd racket-python-transformer
     ```
 2. **Activate Virtual Environment**
@@ -32,18 +32,17 @@ Prepare Your Racket Code
 
 - Ensure that you have a Racket script ready for insertion into your Python code. This script should contain functions or expressions that are meant to be evaluated within the Python environment.
 
-### Example: Create a file named racket_insert.rkt :
+### Example: Create the racket_insert.rkt :
 
 ```bash
-(define (square x)
-  (* x x))
+(proc (a b c x) (+ (* a (* x x)) ( + (* b x) c)))
 ```
 
 Prepare Your Python Script with racket_insert Calls
 
 Your Python script should contain racket_insert("<file_name>.rkt") calls at locations where you want to insert Racket code.
 
-Example: Create file named input_script.py 
+Example: Create the file input_script.py 
 
 ```bash
 funcc = racket_insert("racket_insert.rkt")
