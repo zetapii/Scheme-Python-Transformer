@@ -32,7 +32,7 @@ Prepare Your Racket Code
 
 - Ensure that you have a Racket script ready for insertion into your Python code. This script should contain functions or expressions that are meant to be evaluated within the Python environment.
 
-### Example: Create a file named racket_insert.rkt with the following content:
+### Example: Create a file named racket_insert.rkt :
 
 ```bash
 (define (square x)
@@ -43,7 +43,7 @@ Prepare Your Python Script with racket_insert Calls
 
 Your Python script should contain racket_insert("<file_name>.rkt") calls at locations where you want to insert Racket code.
 
-Example: Create a file named input_script.py with the following content:
+Example: Create file named input_script.py 
 
 ```bash
 funcc = racket_insert("racket_insert.rkt")
